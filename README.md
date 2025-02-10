@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+Тестовое задание состоит из двух задач. Первая задача алгоритмическая и выполняется на
+JavaScript. Во второй задаче требуется создать React-приложение, которое будет визуализировать
+алгоритм, созданный в ходе выполнения первой задачи.
+Задача 1.
+Требуется написать алгоритм определяющий вхождение подматрицы размера 2x2 в
+матрицу шестнадцатеричных символов.
+На вход алгоритм принимает:
+1. Матрицу шестнадцатеричных символов, в которой будет осуществляться поиск.
+2. Подматрицу шестнадцатеричных символов размера 2x2.
+На выходе алгоритм возвращает:
+1. Список с информацией и найденных подматрицах. Пример возвращаемого значения:
+[
+{
+topLeft: {x: 3, y: 4},
+topRight: {x: 4, y: 4},
+bottomLeft: {x:3, y: 5},
+bottomRightIndex: {x:4, y: 5}
+},
+{
+topLeft: {x: 5, y: 7},
+topRight: {x: 6, y: 7},
+bottomLeft: {x:5, y: 8},
+bottomRightIndex: {x:6, y: 8}
+}
+]
+В данном примере алгоритм обнаружил два вхождения подматрицы в основную матрицу
+и вернул список из двух объектов, описывающих крайние координаты найденных подматриц.
+Задача 2.
+Требуется создать React-приложение, определяющее и отображающее визуально
+вхождение подматрицы в матрицу шестнадцатеричных символов, используя алгоритм,
+написанный для задачи 1.
+Приложение должно включать в себя следующие компоненты:
+a. Фрейм, в котором будет отображаться матрица шестнадцатеричных символов.
+b. Поля ввода для задания размеров матрицы (строки, столбцы), отображаемой в
+фрейме из пункта “a”.
+c. Кнопка с подписью “Сгенерировать”, которая по нажатию запускает генерацию
+набора шестнадцатеричных символов, используя данные из полей ввода (пункт
+b). После создания набор должен быть отображен в фрейме из пункта “а”.
+d. Четыре поля ввода для задания символов подматрицы. Седлать ограничения
+для этих полей: можно ввести только 1 символ; можно использовать только
+шестнадцатеричные символы (0 - F).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+e. Кнопка “Найти”, по нажатию на которую, все вхождения заданной подматрицы
+(пункт d) должны быть выделены в фрейме со сгенерированной матрицей
+(пункт a).
+Ход работы приложения:
+При открытии фрейм (пункт “a”) и все поля ввода должны быть пустыми. Кнопки
+“Сгенерировать” и “Найти” должны быть недоступны (Рис. 1.). После ввода значений в поля из
+пункта “b”, кнопка “Сгенерировать” должна стать доступной. После нажатия на эту кнопку должна
+быть сгенерирована и отображена матрица шестнадцатеричных символов. Далее пользователь
+заполняет подматрицу (пункт “d”), после этого должна стать активной кнопка “Найти”, по нажатию
+на которую происходит поиск и выделение всех вхождений подматрицы в матрицу во фрейме
+матрицы (Рис. 2.).
+При очистке полей ввода, зависящие от них копки должны становиться недоступными.
+Предусмотреть возможность перегенерации матрицы и поиска новой подматрицы.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Стек технологий:
+HTML, CSS, JavaScript, React. Для удобства создания полей ввода и кнопок можно
+использовать библиотеку компонентов - Ant Design.
